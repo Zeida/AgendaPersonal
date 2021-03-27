@@ -8,7 +8,7 @@ export class Persona{
     private _apellidos: string; 
     private _edad: number; 
     private _dni: string;
-    private _cumpleaños: Date;
+    private _cumpleaños: string;
     private _colorFavorito: string;
     private _sexo: string;
     private _direcciones: Array<Direccion> = [];
@@ -16,7 +16,7 @@ export class Persona{
     private _telefonos: Array<Telefono> = [];
     private _notas: string;
 
-    constructor(nombre:string, apellidos:string, edad:number, dni:string, cumpleaños:Date, 
+    constructor(nombre:string, apellidos:string, edad:number, dni:string, cumpleaños:string, 
         colorFavorito:string, sexo:string, direcciones:Array<Direccion>, mails:Array<Mail>, telefonos:Array<Telefono>, notas:string){
             this._nombre = nombre;
             this._apellidos = apellidos;
@@ -31,28 +31,6 @@ export class Persona{
             this._notas = notas;
     }
 
-    public borrarTelefono(posicion:number){
-        this.telefonos.splice(posicion, 1);
-    }
-
-    public addTelefono(telefono:Telefono){
-        this.telefonos.push(telefono);
-    }
-
-    public borrarEmail(posicion:number){
-        this.mails.splice(posicion, 1);
-    }
-
-    public addMails(mail:Mail){
-        this.mails.push(mail);
-    }
-    public borrarDireccion(posicion:number){
-        this.direcciones.splice(posicion, 1);
-    }
-
-    public addDireccion(direccion:Direccion){
-        this.direcciones.push(direccion);
-    }
     
     public get nombre(): string {
         return this._nombre;
@@ -86,11 +64,11 @@ export class Persona{
         this._dni = value;
     }
     
-    public get cumpleaños(): Date {
+    public get cumpleaños(): string {
         return this._cumpleaños;
     }
 
-    public set cumpleaños(value: Date) {
+    public set cumpleaños(value: string) {
         this._cumpleaños = value;
     }
     
@@ -109,7 +87,6 @@ export class Persona{
     public set sexo(value: string) {
         this._sexo = value;
     }
-    
     
     public get telefonos(): Array<Telefono> {
         return this._telefonos;
@@ -141,6 +118,29 @@ export class Persona{
 
     public set mails(value: Array<Mail>) {
         this._mails = value;
+    }
+
+    public borrarTelefono(posicion:number){
+        this.telefonos.splice(posicion, 1);
+    }
+
+    public addTelefono(telefono:Telefono){
+        this.telefonos.push(telefono);
+    }
+
+    public borrarEmail(posicion:number){
+        this.mails.splice(posicion, 1);
+    }
+
+    public addMails(mail:Mail){
+        this.mails.push(mail);
+    }
+    public borrarDireccion(posicion:number){
+        this.direcciones.splice(posicion, 1);
+    }
+
+    public addDireccion(direccion:Direccion){
+        this.direcciones.push(direccion);
     }
       
 }

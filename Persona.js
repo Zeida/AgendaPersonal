@@ -18,24 +18,6 @@ var Persona = /** @class */ (function () {
         this._telefonos = telefonos;
         this._notas = notas;
     }
-    Persona.prototype.borrarTelefono = function (posicion) {
-        this.telefonos.splice(posicion, 1);
-    };
-    Persona.prototype.addTelefono = function (telefono) {
-        this.telefonos.push(telefono);
-    };
-    Persona.prototype.borrarEmail = function (posicion) {
-        this.mails.splice(posicion, 1);
-    };
-    Persona.prototype.addMails = function (mail) {
-        this.mails.push(mail);
-    };
-    Persona.prototype.borrarDireccion = function (posicion) {
-        this.direcciones.splice(posicion, 1);
-    };
-    Persona.prototype.addDireccion = function (direccion) {
-        this.direcciones.push(direccion);
-    };
     Object.defineProperty(Persona.prototype, "nombre", {
         get: function () {
             return this._nombre;
@@ -146,6 +128,24 @@ var Persona = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    Persona.prototype.borrarTelefono = function (posicion) {
+        this.telefonos.splice(posicion, 1);
+    };
+    Persona.prototype.addTelefono = function (telefono) {
+        this.telefonos.push(telefono);
+    };
+    Persona.prototype.borrarEmail = function (posicion) {
+        this.mails.splice(posicion, 1);
+    };
+    Persona.prototype.addMails = function (mail) {
+        this.mails.push(mail);
+    };
+    Persona.prototype.borrarDireccion = function (posicion) {
+        this.direcciones.splice(posicion, 1);
+    };
+    Persona.prototype.addDireccion = function (direccion) {
+        this.direcciones.push(direccion);
+    };
     return Persona;
 }());
 exports.Persona = Persona;
