@@ -7,6 +7,8 @@ let personas:Array<Persona> = [];
 
 console.log('------------- Iniciamos ejecución del programa -------------------');
 
+console.log('############# Se crean y muestran 5 registros ###################');
+
 let zeida = new Persona("Zeida", "Rodríguez Mendoza", 24, "56406618Q", "5/01/1997", "verde", "F", [], [], [], "Propio");
 let reyes = new Persona("Reyes", "Moreno", 63, "56423418D", "3/03/1957", "verde", "M", [], [], [], "Familia");
 let jonay = new Persona("Jonay", "Mendoza", 38, "56406348C", "14/09/1982", "azul", "F", [], [], [], "Familia");
@@ -54,6 +56,30 @@ personas.push(zeida, reyes, jonay, fayna, luis);
 for (let persona of personas) {
     console.log(persona);
   }
+  console.log('############# Fin punto 1 ###################');
+
+console.log('############# Buscamos un registro por su DNI, modificamos email, direccion y telefono y se muestra ###################');
+
+let zeidamod = personas.filter(persona => persona.dni == "56406618Q")[0];
+zeidamod.borrarDireccion(0);
+zeidamod.borrarEmail(0);
+zeidamod.borrarTelefono(0);
+zeida.addDireccion(new Direccion("Calle Tori", "1", "3", "E", "35429", "Arucas", "Las Palmas"));
+zeida.addTelefono(new Telefono("Trabajo", "293020211"));
+zeida.addMails(new Mail("Trabajo", "Zeida@outlook.es"));
+
+console.log(zeidamod);
+console.log('############# Fin punto 2 ###################');
+
+console.log('############# Se muestran todos los registros y sus modificaciones ###################');
+for (let persona of personas) {
+    console.log(persona);
+  }
+
+  console.log('############# Fin punto 3 ###################');
+
+
+
 
 console.log ('----------- Finalizamos ejecución del programa --------------------');
 
