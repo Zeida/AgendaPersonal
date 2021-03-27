@@ -78,8 +78,5 @@ for (let persona of personas) {
 
   console.log('############# Fin punto 3 ###################');
 
-
-
-
 console.log ('----------- Finalizamos ejecución del programa --------------------');
 
